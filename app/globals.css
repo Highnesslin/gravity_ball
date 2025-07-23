@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --page-header-height: 0px;
-}
+} */
 
 @media (min-width: 768px) {
-  :root {
-    --page-header-height: 64px;
-  }
+}
+:root {
+  --page-header-height: 64px;
 }
 
 /* 全局细滚动条样式 */

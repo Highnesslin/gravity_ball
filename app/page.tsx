@@ -33,13 +33,26 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='py-20 bg-white text-center max-w-5xl mx-auto'>
-        <h2 className='text-4xl font-bold mb-6 text-gray-900'>Similar Games You Might Like</h2>
-        <p className='text-gray-600 text-lg'>Coming soon! Stay tuned for more exciting games.</p>
+      {/*  */}
+      <section
+        id='introduce'
+        className='py-24 bg-gradient-to-b from-white via-sky-50 to-white text-center px-6'
+      >
+        <div className='max-w-4xl mx-auto'>
+          <h2 className='text-5xl font-extrabold mb-6 text-sky-600'>What is Gravity Ball?</h2>
+          <p className='text-gray-700 text-lg leading-relaxed'>
+            <span className='font-semibold text-sky-700'>Gravity Ball</span> is a fun and casual
+            cartoon-style puzzle game featuring realistic physics! With its clean and charming
+            visuals, it’s perfect for passing the time. The addictive gameplay will keep you hooked
+            — control the ball to bounce by hitting white balls and avoid touching any black areas,
+            or it's game over.
+          </p>
+          <p className='mt-4 text-gray-700 text-lg leading-relaxed'>How far can your ball go?</p>
+        </div>
       </section>
 
       <footer className='py-6 text-center text-gray-500 text-sm bg-white border-t border-gray-200'>
-        © 2025 Gravity Jumping. All rights reserved.
+        © 2025 Gravity Ball. All rights reserved.
       </footer>
     </>
   )
