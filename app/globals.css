@@ -3,7 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --page-header-height: 64px;
+  --page-header-height: 0px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --page-header-height: 64px;
+  }
 }
 
 /* 全局细滚动条样式 */

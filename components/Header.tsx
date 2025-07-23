@@ -1,7 +1,5 @@
 'use client'
 
-import Link from 'next/link'
-
 export default function Header() {
   const toggleMenu = () => {
     //
@@ -13,12 +11,12 @@ export default function Header() {
         <div className='flex justify-between items-center py-4'>
           <div className='text-2xl font-bold text-sky-600'>Gravity Jumping</div>
           <div className='hidden md:flex space-x-8 text-sm font-medium'>
+            <a href='#GameScene' className='hover:text-sky-600 transition'>
+              Play
+            </a>
             <a href='#features' className='hover:text-sky-600 transition'>
               Features
             </a>
-            <Link href='/Contact' className='hover:text-sky-600 transition'>
-              Contact
-            </Link>
           </div>
           <div className='md:hidden'>
             <button onClick={toggleMenu} className='text-gray-700 focus:outline-none'>
