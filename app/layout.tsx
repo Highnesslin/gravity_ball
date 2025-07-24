@@ -1,12 +1,15 @@
 import type { Metadata } from 'next'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
 import Script from 'next/script'
-import { GoogleAnalytics } from '@next/third-parties/google';
 
 export const metadata: Metadata = {
-  title: 'Gravity Ball - Fun Physics Tap Game | Gravity Jumping Ball Game |Tapping Games & Ball Bouncing Adventure',
-  keywords: 'tapping games, tap game, Ball Bouncing Game, Jumping Ball, Gravity Jumping Ball, fun tap games, online ball game, bouncing ball, addictive tap game, casual jumping game, online puzzle game, brain training game, casual physics game, free online game, Leap On play online, Leap On browser game',
-  description: 'Play Gravity Ball, a fun online tap game! Guide a bouncing ball, master gravity, and enjoy the thrill of Gravity Jumping Ball. No download needed.',
+  title:
+    'Gravity Ball - Fun Physics Tap Game | Gravity Jumping Ball Game |Tapping Games & Ball Bouncing Adventure',
+  keywords:
+    'tapping games, tap game, Ball Bouncing Game, Jumping Ball, Gravity Jumping Ball, fun tap games, online ball game, bouncing ball, addictive tap game, casual jumping game, online puzzle game, brain training game, casual physics game, free online game, Leap On play online, Leap On browser game',
+  description:
+    'Play Gravity Ball, a fun online tap game! Guide a bouncing ball, master gravity, and enjoy the thrill of Gravity Jumping Ball. No download needed.',
 }
 
 export default function RootLayout({
@@ -17,6 +20,7 @@ export default function RootLayout({
   return (
     <html className='scroll-smooth'>
       <body className='text-gray-800 font-sans'>{children}</body>
+      <Script id='core-asset' src='Build/GravityBall.loader.js' />
       <GoogleAnalytics gaId={'G-KJQQX3Q1Q3'} />
     </html>
   )
