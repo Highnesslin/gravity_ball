@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html className='scroll-smooth'>
-      <Head>
+      <head>
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{
@@ -41,7 +41,7 @@ export default function RootLayout({
             }),
           }}
         />
-      </Head>
+      </head>
       <body className='text-gray-800 font-sans'>{children}</body>
       <Script id='core-asset' src='Build/GravityBall.loader.js' />
       <GoogleAnalytics gaId={'G-KJQQX3Q1Q3'} />
