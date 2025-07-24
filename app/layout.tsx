@@ -26,7 +26,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'Game',
+              '@type': 'SoftwareApplication',
               name: 'Gravity Ball',
               url: 'https://gravityball.top/',
               description:
