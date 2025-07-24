@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: 'Gravity Ball - Fun Physics Tap Game | Gravity Jumping Ball Game |Tapping Games & Ball Bouncing Adventure',
@@ -15,6 +16,17 @@ export default function RootLayout({
   return (
     <html className='scroll-smooth'>
       <body className='text-gray-800 font-sans'>{children}</body>
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-KJQQX3Q1Q3"></Script>
+      <Script dangerouslySetInnerHTML={{
+        __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-KJQQX3Q1Q3');
+        `
+      }}>
+      </Script>
     </html>
   )
 }
