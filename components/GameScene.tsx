@@ -80,7 +80,7 @@ export default function GameScene() {
           </div>
         )}
       </section>
-      <div className="flex justify-end items-center max-w-[90vw] w-20vh md:w-[80vh] mx-auto mb-16 bg-gray-700/70 dark:bg-gray-800/70 text-white md:rounded-md !rounded-t-none p-2 shadow-md">
+      <div className="flex justify-end items-center max-w-[90vw] w-20vh md:w-[80vh] mx-auto bg-gray-700/70 dark:bg-gray-800/70 text-white md:rounded-md !rounded-t-none p-2 shadow-md">
         <Fullscreen className='cursor-pointer text-white' onClick={onFullscreen} />
       </div>
     </>

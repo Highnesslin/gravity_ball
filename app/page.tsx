@@ -11,7 +11,7 @@ export default function Home() {
       {/* <!-- Features Section --> */}
       <section
         id='features'
-        className='py-20 px-6 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8'
+        className='my-20 px-6 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8'
       >
         <div className='bg-white/90 p-6 rounded-xl shadow hover:scale-105 transition'>
           <h3 className='text-xl font-semibold mb-2 text-sky-600'>Gravity Flip Mechanics</h3>
@@ -36,7 +36,7 @@ export default function Home() {
       {/*  */}
       <section
         id='introduce'
-        className='py-24 bg-gradient-to-b from-white via-sky-50 to-white text-center px-6'
+        className='my-20 bg-gradient-to-b from-white via-sky-50 to-white text-center px-6'
       >
         <div className='max-w-4xl mx-auto'>
           <h2 className='text-5xl font-extrabold mb-6 text-sky-600'>What is Gravity Ball?</h2>
