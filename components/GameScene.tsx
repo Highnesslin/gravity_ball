@@ -50,7 +50,7 @@ export default function GameScene() {
           onPlay()
         }}
       ></Script>
-      <section className='relative max-w-[90vw] w-20vh md:w-[80vh] h-[70vh] md:h-[60vh] mx-auto mt-[calc(var(--page-header-height)+20px)]  overflow-hidden md:rounded-md !rounded-b-none shadow-xl transition-all'>
+      <section className='relative max-w-[90vw] w-20vh md:w-[80vh] h-[70vh] md:h-[90vh] mx-auto mt-[calc(var(--page-header-height)+20px)]  overflow-hidden md:rounded-md !rounded-b-none shadow-xl transition-all'>
         <canvas id='GameScene' className='absolute inset-0 size-full bg-black' />
 
         {(status === STATUS.LOADING ||
