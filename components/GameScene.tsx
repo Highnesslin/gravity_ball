@@ -51,7 +51,7 @@ export default function GameScene() {
           onPlay()
         }}
       ></Script>
-      <section className='relative max-w-[90vw] w-20vh md:w-[88vh] h-[60vh] md:h-[82vh] mx-auto mt-[calc(var(--page-header-height)+20px)]  overflow-hidden md:rounded-md !rounded-b-none shadow-xl transition-all'>
+      <section className='relative w-full flex-1 overflow-hidden md:rounded-md !rounded-b-none shadow-xl transition-all'>
         <canvas id='GameScene' className='absolute inset-0 size-full bg-black' />
 
         {(status === STATUS.LOADING ||
@@ -71,7 +71,7 @@ export default function GameScene() {
           </div>
         )}
       </section>
-      <div className='flex justify-end items-center relative z-10 max-w-[90vw] w-20vh md:w-[88vh] mx-auto bg-gradient-to-b from-sky-100 to-white md:rounded-md !rounded-t-none p-2 shadow-md'>
+      <div className='flex justify-end items-center relative z-10 w-full h-9 bg-gradient-to-b from-sky-100 to-white md:rounded-md !rounded-t-none p-2 shadow-md'>
         {/* <Online /> */}
         <Fullscreen className='cursor-pointer text-slate-800' onClick={onFullscreen} />
       </div>

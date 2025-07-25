@@ -1,4 +1,5 @@
 import GameScene from '@/components/GameScene'
+import GoogleAd from '@/components/GoogleAd'
 import Header from '@/components/Header'
 
 export default function Home() {
@@ -6,7 +7,13 @@ export default function Home() {
     <>
       <Header />
 
-      <GameScene />
+      <section className='flex justify-center gap-2 w-full h-[66vh] md:h-[88vh] mx-auto mt-[calc(var(--page-header-height)+20px)] overflow-hidden'>
+        <GoogleAd />
+        <div className='flex flex-col w-full max-w-[90vw] md:w-[88vh] '>
+          <GameScene />
+        </div>
+        <GoogleAd />
+      </section>
 
       {/* <!-- Features Section --> */}
       <section

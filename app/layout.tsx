@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import Script from 'next/script'
-import Head from 'next/head'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -42,9 +41,18 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className='text-gray-800 font-sans'>{children}</body>
-      <Script id='core-asset' src='Build/GravityBall.loader.js' />
-      <GoogleAnalytics gaId={'G-KJQQX3Q1Q3'} />
+      <body className='text-gray-800 font-sans'>
+        {children}
+
+        <Script id='core-asset' src='Build/GravityBall.loader.js' />
+        <GoogleAnalytics gaId={'G-KJQQX3Q1Q3'} />
+
+        {/* <script
+          async
+          src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8439460293607938'
+          crossOrigin='anonymous'
+        ></script> */}
+      </body>
     </html>
   )
 }
