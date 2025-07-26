@@ -1,5 +1,4 @@
 import GameScene from '@/components/GameScene'
-import GoogleAd from '@/components/GoogleAd'
 import Header from '@/components/Header'
 
 export default function Home() {

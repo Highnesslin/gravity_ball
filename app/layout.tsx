@@ -50,7 +50,7 @@ export default function RootLayout({
         {children}
 
         <Script id='core-asset' src='Build/GravityBall.loader.js' />
-        <GoogleAnalytics gaId={'G-KJQQX3Q1Q3'} />
+        {process.env.NODE_ENV !== 'development' && <GoogleAnalytics gaId={'G-KJQQX3Q1Q3'} />}
       </body>
     </html>
   )

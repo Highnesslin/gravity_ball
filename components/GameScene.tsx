@@ -19,6 +19,7 @@ export default function GameScene() {
   const progress = React.useRef<ProgressBarRef>(null)
   const onPlay = async () => {
     setStatus(STATUS.PREPARING)
+    const startTime = performance.now()
 
     window
       .createUnityInstance(document.querySelector('#GameScene')!, {
@@ -32,14 +33,26 @@ export default function GameScene() {
       })
       .then(() => {
         progress.current?.complete()
-        // 延迟一秒
         setTimeout(() => {
           setStatus(STATUS.COMPLETE)
         }, 1000)
-        // TODO: 记录多久加载出游戏
+
+        const loadTime = Math.round(performance.now() - startTime)
+
+        // ✅ 上传加载成功埋点，适合移动端和桌面
+        window.gtag?.('event', 'game_loaded', {
+          load_time_ms: loadTime,
+          scene: 'GameScene',
+          device_category: navigator.userAgent.match(/Mobi|Android|iPhone/i) ? 'mobile' : 'desktop',
+        })
       })
-      .finally(() => {
-        // TODO: 记录错误
+      .catch(err => {
+        window.gtag?.('event', 'game_load_error', {
+          message: err?.message || 'Unknown error',
+          scene: 'GameScene',
+          device_category: navigator.userAgent.match(/Mobi|Android|iPhone/i) ? 'mobile' : 'desktop',
+        })
+        console.error('load failed:', err)
       })
   }
 
