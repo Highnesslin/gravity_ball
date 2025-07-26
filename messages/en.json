@@ -1,0 +1,40 @@
+{
+  "Common": {
+    "brandName": "Gravity Ball"
+  },
+  "Menu": {
+    "play": "Play",
+    "introduce": "Introduce",
+    "features": "Features",
+    "contact": "Contact"
+  },
+  "HomePage": {
+    "featureTitle1": "Play Anytime, Totally Free",
+    "featureContent1": "No login, no download, no paywall. Just tap and play instantly — pure fun with zero cost.",
+    "featureTitle2": "Gravity Flip Mechanics",
+    "featureContent2": "Tap to reverse gravity and dodge deadly traps in a constantly shifting world.",
+    "featureTitle3": "Endless Jump Challenge",
+    "featureContent3": "Randomly generated obstacles challenge your reflex limits!",
+    
+    "introduceTitle": "What is Gravity Ball?",
+    "introduceContent": "is a fun and casual cartoon-style puzzle game featuring realistic physics! Enjoy this fast-paced online game with clean and charming visuals — perfect for killing time anywhere, anytime. The addictive gameplay will keep you hooked: control the ball to bounce by hitting white balls and avoid the black zones — or it’s game over.",
+    "introduceGuide": "How far can your ball go",
+    
+    "contactTitle": "Get in Touch",
+    "contactContent": "Have any questions, feedback, or ideas? We’d love to hear from you!"
+  },
+  "Metadata": {
+    "title": "Gravity Ball - Fun Physics Tap Game | Gravity Jumping Ball Game |Tapping Games & Ball Bouncing Adventure",
+    "description": "Play Gravity Ball, a fun online tap game! Guide a bouncing ball, master gravity, and enjoy the thrill of Gravity Jumping Ball. No download needed.",
+    "keywords": "tapping games, tap game, Ball Bouncing Game, Jumping Ball, Gravity Jumping Ball, fun tap games, online ball game, bouncing ball, addictive tap game, casual jumping game, online puzzle game, brain training game, casual physics game, free online game, Leap On play online, Leap On browser game"
+  },
+  "OpenGraph": {
+    "title": "Gravity Ball - Fun & Addictive Tap Game",
+    "description": "Jump into Gravity Ball – a thrilling browser game where you bounce, dodge, and master gravity! No download needed, play instantly.",
+    "siteName": "Gravity Ball"
+  },
+  "JsonLD": {
+    "name": "Gravity Ball",
+    "description": "Play Gravity Jumping Ball, a fun and addictive browser tap game. Bounce through obstacles in this thrilling challenge!"
+  }
+}
