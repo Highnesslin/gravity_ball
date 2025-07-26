@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 
-const SITE_URL = 'https://yourdomain.com'
+const SITE_URL = 'https://gravityball.top'
 const locales = ['', 'zh']
 
 export async function GET() {
