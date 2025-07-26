@@ -58,13 +58,14 @@ export default function GameScene() {
           status === STATUS.PREPARING ||
           status === STATUS.ALREADY) && (
           <div className='absolute inset-0 size-full z-10 flex items-center justify-center'>
-            <div
-              className='absolute inset-0 size-full bg-cover bg-center'
-              style={{ backgroundImage: 'url(/snapshot.jpg)' }}
+            <img
+              src='/snapshot.jpg'
+              alt='Gravity Ball game cover with a bouncing ball in space'
+              className='absolute inset-0 size-full object-cover'
             />
             <div className='absolute inset-0 size-full z-10 bg-black/10' />
             {(status === STATUS.LOADING || status === STATUS.PREPARING) && (
-              <div className='relative z-10 bg-white shadow-lg rounded-2xl p-8 max-w-sm w-full text-center'>
+              <div className='relative z-10 bg-white shadow-lg rounded-2xl p-4 md:p-8 max-w-sm w-full text-center'>
                 <p className='text-3xl font-bold text-sky-500'>Loading...</p>
               </div>
             )}

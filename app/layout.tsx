@@ -35,7 +35,7 @@ export default function RootLayout({
               url: 'https://gravityball.top/',
               description:
                 'Play Gravity Jumping Ball, a fun and addictive browser tap game. Bounce through obstacles in this thrilling challenge!',
-              image: 'https://gravityball.top/snapshot2.jpg',
+              image: 'https://gravityball.top/snapshot2.png',
               applicationCategory: 'Game',
               operatingSystem: 'Web',
               author: {
