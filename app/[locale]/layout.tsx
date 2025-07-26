@@ -5,7 +5,6 @@ import { getMessages } from 'next-intl/server'
 import { routing } from '@/i18n/routing'
 import Script from 'next/script'
 import { notFound } from 'next/navigation'
-import '../globals.css'
 
 // TDK
 export async function generateMetadata({
