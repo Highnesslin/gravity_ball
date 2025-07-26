@@ -21,6 +21,11 @@ export default function RootLayout({
     <html className='scroll-smooth'>
       <head>
         <script
+          async
+          src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8439460293607938'
+          crossOrigin='anonymous'
+        ></script>
+        <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -46,12 +51,6 @@ export default function RootLayout({
 
         <Script id='core-asset' src='Build/GravityBall.loader.js' />
         <GoogleAnalytics gaId={'G-KJQQX3Q1Q3'} />
-
-        {/* <script
-          async
-          src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8439460293607938'
-          crossOrigin='anonymous'
-        ></script> */}
       </body>
     </html>
   )

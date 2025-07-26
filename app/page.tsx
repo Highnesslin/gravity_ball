@@ -8,11 +8,15 @@ export default function Home() {
       <Header />
 
       <section className='flex justify-center gap-2 w-full h-[66vh] md:h-[88vh] mx-auto mt-[calc(var(--page-header-height)+20px)] overflow-hidden'>
-        <GoogleAd />
+        <div className='hidden md:block md:flex-1'>
+          {/* 广告位 */}
+        </div>
         <div className='flex flex-col w-full max-w-[90vw] md:w-[88vh] '>
           <GameScene />
         </div>
-        <GoogleAd />
+        <div className='hidden md:block md:flex-1'>
+          {/* 广告位 */}
+        </div>
       </section>
 
       {/* <!-- Features Section --> */}
