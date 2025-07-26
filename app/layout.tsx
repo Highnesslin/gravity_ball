@@ -20,6 +20,7 @@ export default function RootLayout({
   return (
     <html className='scroll-smooth'>
       <head>
+        <link rel="canonical" href="https://gravityball.top" />
         <script
           async
           src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8439460293607938'
