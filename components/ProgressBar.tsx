@@ -40,7 +40,7 @@ const ProgressBar = React.forwardRef<ProgressBarRef>((_, ref) => {
   }))
 
   return (
-    <div className='flex-1 relative max-w-md md:mx-7 z-10'>
+    <div className='flex-1 relative max-w-lg md:mx-0 mx-7 z-10'>
       <div
         className='inline-block mb-2 py-0.5 px-1.5 bg-blue-50 border border-blue-200 text-xs font-medium text-blue-600 rounded-lg transition-all ease-linear'
         style={{
