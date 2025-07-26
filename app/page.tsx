@@ -7,15 +7,16 @@ export default function Home() {
       <Header />
 
       <section className='flex justify-center gap-2 w-full h-[66vh] md:h-[88vh] mx-auto mt-[calc(var(--page-header-height)+20px)] overflow-hidden'>
-        <div className='hidden md:block md:flex-1'>
-          {/* 广告位 */}
-        </div>
+        <img
+          src='/bg.png'
+          alt='Gravity Ball game cover with a bouncing ball in space'
+          className='hidden md:block absolute left-0 top-[var(--page-header-height)] w-full h-[86%] object-cover blur-sm'
+        />
+        <div className='hidden md:block md:flex-1'>{/* 广告位 */}</div>
         <div className='flex flex-col w-full max-w-[90vw] md:w-[88vh] '>
           <GameScene />
         </div>
-        <div className='hidden md:block md:flex-1'>
-          {/* 广告位 */}
-        </div>
+        <div className='hidden md:block md:flex-1'>{/* 广告位 */}</div>
       </section>
 
       {/* <!-- Features Section --> */}

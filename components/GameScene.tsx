@@ -80,9 +80,9 @@ export default function GameScene() {
             <img
               src='/snapshot.jpg'
               alt='Gravity Ball game cover with a bouncing ball in space'
-              className='absolute inset-0 size-full object-cover'
+              className='absolute inset-0 size-full object-cover blur-sm'
             />
-            <div className='absolute inset-0 size-full z-10 bg-sky-100/70' />
+            {/* <div className='absolute inset-0 size-full z-10 bg-sky-100/70' /> */}
             <ProgressBar ref={progress} />
           </div>
         )}
