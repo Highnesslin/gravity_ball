@@ -10,10 +10,10 @@ import { notFound } from 'next/navigation'
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: 'en' | 'zh' }
+  params: Promise<{ locale: string }>
 }): Promise<Metadata> {
   const { locale } = await params
-  if (!routing.locales.includes(locale)) notFound()
+  if (!routing.locales.includes(locale as 'zh' | 'en')) notFound()
 
   const messages = await getMessages()
   const tdk = messages.Metadata
