@@ -4,18 +4,19 @@ import React from 'react'
 import Script from 'next/script'
 import Fullscreen from './Fullscreen'
 import screenfull from 'screenfull'
-// import Online from './Online'
+import ProgressBar, { ProgressBarRef } from './ProgressBar'
 
 enum STATUS {
-  INIT = 0,
-  LOADING = 1,
-  ALREADY = 2,
-  PREPARING = 3,
-  COMPLETE = 4,
+  LOADING = 1, // 加载中
+  LOADED = 2, // 加载完成
+  PREPARING = 3, // 准备中
+  READY = 4, // 准备完成
+  COMPLETE = 5, // 最终完成
 }
 
 export default function GameScene() {
   const [status, setStatus] = React.useState(STATUS.LOADING)
+  const progress = React.useRef<ProgressBarRef>(null)
   const onPlay = async () => {
     setStatus(STATUS.PREPARING)
 
@@ -30,7 +31,15 @@ export default function GameScene() {
         productVersion: '1.0.0',
       })
       .then(() => {
-        setStatus(STATUS.COMPLETE)
+        progress.current?.complete()
+        // 延迟一秒
+        setTimeout(() => {
+          setStatus(STATUS.COMPLETE)
+        }, 1000)
+        // TODO: 记录多久加载出游戏
+      })
+      .finally(() => {
+        // TODO: 记录错误
       })
   }
 
@@ -47,28 +56,21 @@ export default function GameScene() {
         id='core-asset'
         src='Build/GravityBall.loader.js'
         onLoad={() => {
-          setStatus(STATUS.ALREADY)
           onPlay()
         }}
       ></Script>
       <section className='relative w-full flex-1 overflow-hidden md:rounded-md !rounded-b-none shadow-xl transition-all'>
         <canvas id='GameScene' className='absolute inset-0 size-full bg-black' />
 
-        {(status === STATUS.LOADING ||
-          status === STATUS.PREPARING ||
-          status === STATUS.ALREADY) && (
+        {status !== STATUS.COMPLETE && (
           <div className='absolute inset-0 size-full z-10 flex items-center justify-center'>
             <img
               src='/snapshot.jpg'
               alt='Gravity Ball game cover with a bouncing ball in space'
               className='absolute inset-0 size-full object-cover'
             />
-            <div className='absolute inset-0 size-full z-10 bg-black/10' />
-            {(status === STATUS.LOADING || status === STATUS.PREPARING) && (
-              <div className='relative z-10 bg-white shadow-lg rounded-2xl p-4 md:p-8 max-w-sm w-full text-center'>
-                <p className='text-3xl font-bold text-sky-500'>Loading...</p>
-              </div>
-            )}
+            <div className='absolute inset-0 size-full z-10 bg-sky-100/70' />
+            <ProgressBar ref={progress} />
           </div>
         )}
       </section>
